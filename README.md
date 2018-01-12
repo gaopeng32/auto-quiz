@@ -1,4 +1,4 @@
-# Python script for automatic question-answer search
+# A Python tool for automatic question-answer search
 
 
 ## Prerequisite:
@@ -47,4 +47,4 @@ python ans.py
 ```
 
 * ```get_screenshot_v1()```: Use PIL.ImageGrab to take a screenshot
-* ```get_screenshot_v2```: Use CoreGraphics to take a screenshot (faster capturing time)
+* ```get_screenshot_v2()```: Use CoreGraphics to take a screenshot (faster capturing time)
