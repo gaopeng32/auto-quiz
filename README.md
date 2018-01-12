@@ -11,7 +11,7 @@
 * pytesseract package
 	* pip install pytesseract
 
-In my local environment, I create a conda environment for this.
+In my local environment, I create a conda environment for easy use.
 	* conda create -n autoQuiz python=3.6 anaconda
 
 
@@ -20,5 +20,5 @@ In my local environment, I create a conda environment for this.
 
 * Start AirServer for Mac & screen mirroring. Move the mirror screen to the upper left corner
 * source activate autoQuiz
-* cd autoQuiz
+* cd /git_clone_dir/autoquiz
 * python ans_v1.py

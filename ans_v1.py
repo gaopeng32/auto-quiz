@@ -93,8 +93,9 @@ def main():
     # region = CG.CGRectMake(0, 100, 380, 550)
     # img = get_screenshot_v1(region=region)
 
+    # Region for screenshot (need to tune)
     region = (30,200,580,400)
-    img = get_screenshot_2(region=region)
+    img = get_screenshot_v2(region=region)
     # img.save("screen.png")
 
     # OCR text recognition    
