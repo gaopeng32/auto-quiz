@@ -67,7 +67,7 @@ def get_screenshot_v1(region=None):
     return im
 
 def get_screenshot_v2(region=None):
-    """Use CoreGraphics to take a screenshot (faster)
+    """Use CoreGraphics to take a screenshot (faster capturing time)
     """
 
     sp = ScreenPixel()

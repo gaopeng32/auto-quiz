@@ -1,24 +1,39 @@
-# Simple python script for automatic question search
+# Python script for automatic question-answer search
+
 
 ## Prerequisite:
 
+* tesseract-ocr with chi-sim language
 * python 3.6
-* tesseract package with chi-sim
-	* brew link libtiff 
-	* brew link libpng 
-	* brew link jpeg
-	* brew install tesseract --with-all-languages
+	* PIL
+	* pytesseract
+	* webbrowser
 * pytesseract package
-	* pip install pytesseract
 
-In my local environment, I create a conda environment for easy use.
-	* conda create -n autoQuiz python=3.6 anaconda
+In my local environment, I install tesseract-ocr using Homebrew
+	```bash
+	brew link libtiff
+	brew link libpng
+	brew link jpeg
+	brew install tesseract --with-all-languages
+	```
+I then create a conda environment and install the python packages
+	```bash
+	conda create -n autoqa python=3.6 anaconda
+	source activate autoqa
+	pip install pytesseract
+	```
 
 
+## Usage Guidelines:
 
-## Usage:
+My own environment: iphone7 & MacBook Pro 15-inch
 
-* Start AirServer for Mac & screen mirroring. Move the mirror screen to the upper left corner
-* source activate autoQuiz
-* cd /git_clone_dir/autoquiz
-* python ans_v1.py
+1. Start Airserver or equivalent solutions for screen mirroring. Move the mirror screen of iphone to the upper left corner of Mac screen.
+
+2. Activate conda environment: `source activate autoQuiz`
+
+3. Run the script
+	```bash
+	python ans.py
+	```
