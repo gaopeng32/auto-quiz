@@ -37,7 +37,7 @@ My own environment: iphone7 & MacBook Pro 15-inch
 2. Activate conda environment: 
 
 ```bash
-source activate autoQuiz
+source activate autoqa
 ```
 
 3. Run the script
@@ -49,5 +49,8 @@ python ans.py
 * ```get_screenshot_v1()```: Use PIL.ImageGrab to take a screenshot
 * ```get_screenshot_v2()```: Use CoreGraphics to take a screenshot (faster capturing time)
 
+
+## Contact
+Peng Gao, <gaopeng32@gmail.com>, <pgao@princeton.edu>
 
 For voice search solutions, it is worth to try [Baidu searchcraft] (http://secr.baidu.com/).

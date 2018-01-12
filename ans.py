@@ -1,6 +1,6 @@
 # coding=utf-8
 
-# Written by Peng Gao (gaopeng32@gmail.com) in Jan 2018
+# Written by Peng Gao (gaopeng32@gmail.com, pgao@princeton.edu) in Jan 2018
 
 import os
 import time
