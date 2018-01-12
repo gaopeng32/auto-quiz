@@ -53,4 +53,4 @@ python ans.py
 ## Contact
 Peng Gao, <gaopeng32@gmail.com>, <pgao@princeton.edu>
 
-For voice search solutions, it is worth to try [Baidu searchcraft] (http://secr.baidu.com/).
+For voice search solutions, it is worth to try Baidu [searchcraft] (http://secr.baidu.com/).
