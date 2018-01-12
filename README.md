@@ -48,3 +48,6 @@ python ans.py
 
 * ```get_screenshot_v1()```: Use PIL.ImageGrab to take a screenshot
 * ```get_screenshot_v2()```: Use CoreGraphics to take a screenshot (faster capturing time)
+
+
+For voice search solutions, it is worth to try [Baidu searchcraft] (http://secr.baidu.com/).
