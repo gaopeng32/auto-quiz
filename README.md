@@ -43,14 +43,12 @@ source activate autoqa
 3. Run the script
 	
 ```bash
-python ans.py
+python ans_v1.py
+python ans_v2.py
 ```
-
-* ```get_screenshot_v1()```: Use PIL.ImageGrab to take a screenshot
-* ```get_screenshot_v2()```: Use CoreGraphics to take a screenshot (faster capturing time)
 
 
 ## Contact
-Peng Gao, <gaopeng32@gmail.com>, <pgao@princeton.edu>
+Peng Gao, <gaopeng32@gmail.com>
 
 For voice search solutions, it is worth to try [Baidu searchcraft](http://secr.baidu.com/).
