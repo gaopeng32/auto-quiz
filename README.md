@@ -22,8 +22,8 @@ brew install tesseract --with-all-languages
 I then created a conda environment and installed the python packages
 
 ```bash
-conda create -n autoqa python=3.6 anaconda
-source activate autoqa
+conda create -n autoquiz python=3.6 anaconda
+source activate autoquiz
 pip install pytesseract
 ```
 
@@ -37,7 +37,7 @@ My own environment: iphone7 & MacBook Pro 15-inch
 2. Activate conda environment: 
 
 ```bash
-source activate autoqa
+source activate autoquiz
 ```
 
 3. Run the script
