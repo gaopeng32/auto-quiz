@@ -44,11 +44,6 @@ def get_best_option(result_list, options, question, is_neg):
 
     if len(score_arr) == 0 or max(score_arr) == 0:
         return None
-    if is_neg:
-        best_score = min(score_arr)
-    else:
-        best_score = max(score_arr)
+    best_score = min(score_arr) if is_neg else max(score_arr)
     best_optinon = options[score_arr.index(best_score)]
-    for num in score_arr:
-        print(num)
     return best_optinon
