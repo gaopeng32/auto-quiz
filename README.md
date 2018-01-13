@@ -1,4 +1,4 @@
-# A Python tool for automatic question-answer search
+# A Python tool for automatic quiz search (MacOS)
 
 
 ## Prerequisite:
