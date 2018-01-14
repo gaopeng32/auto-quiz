@@ -26,8 +26,8 @@ def main():
     if best_option is None:
         print("No answer")
     else:
-    	R = '\033[31m' # red
-    	W  = '\033[0m'  # white (normal)
+    	R = "\033[31m" # red
+    	W  = "\033[0m" # white (normal)
     	print("Best answer: {}{}{}".format(R, best_option, W))
 
     # Record endtime
