@@ -1,3 +1,5 @@
+# Written by Peng Gao (gaopeng32@gmail.com) in Jan 2018
+
 from PIL import Image
 from PIL import ImageGrab
 import struct
@@ -11,10 +13,8 @@ width = 344
 height = 320
 q_height = 180
 
-neg_words = ['没有', '不是', '不会', '不包括', '不属于']
+neg_words = ["没", "不"]
 aux_words = ['下列', '以下']
-opt_aux_word = ['《', '》']
-
 
 class ScreenPixel(object):
     """Captures the screen using CoreGraphics, and provides access to
@@ -94,22 +94,19 @@ def comp_screenshot_run_time():
     with timer("v1.capture"):
         region = (30,230,700,400)
         im1 = get_screenshot_v1(region=region)
-
     with timer("v1.save"):
         im1.save("screen_v1.png")
-
     with timer("v2"):
         region = CG.CGRectMake(10, 120, 344, 80)
         im2 = get_screenshot_v2(region=region)
-
     with timer("v2.save"):
         im2.save("screen_v2.png")
 
 
 def get_raw_text_from_screen():
-    """Take screenshot of question and options parts. 
-    Use OCR to recognize text
+    """Use OCR to extract raw question and options text
     """
+
     region = CG.CGRectMake(start_x, start_y, width, height)
     im = get_screenshot_v2(region=region)
     q_im = im.crop((0, 0, im.width, q_height))
@@ -121,24 +118,21 @@ def get_raw_text_from_screen():
     # opt_im = Image.open("images/options.png")
     question_raw = pytesseract.image_to_string(q_im,lang='chi_sim')
     options_raw = pytesseract.image_to_string(opt_im,lang='chi_sim')
-
     return question_raw, options_raw
 
 
 def parse_question_option(question_raw, options_raw):
-    print(question_raw)
-    # Question
-    question = question_raw.replace("\n", "").replace(" ", "").lstrip(".1234567890")
+    """Parse question text and options text
+    """
 
-    # Options
+    question = question_raw.replace("\n", "").replace(" ", "").lstrip(".1234567890")
     options = []
     for opt in options_raw.replace(" ", "").split("\n\n"):
-        if opt != "" and not opt.isspace():
-            if opt.startswith(opt_aux_word[0]):
-                opt = opt[1:]
-            if opt.endswith(opt_aux_word[1]):
-                opt = opt[:-1]
-            options.append(opt)
+        if opt.startswith("《"):
+            opt = opt[1:]
+        if opt.endswith("》"):
+            opt = opt[:-1]
+        options.append(opt)
     is_neg = False
     for word in neg_words:
         if word in question:
@@ -147,5 +141,4 @@ def parse_question_option(question_raw, options_raw):
     for word in neg_words + aux_words:
         if word in question:
             question.replace(word, "")
-
     return question, options, is_neg

@@ -1,5 +1,3 @@
-# coding=utf-8
-
 # Written by Peng Gao (gaopeng32@gmail.com) in Jan 2018
 
 import os
@@ -118,7 +116,7 @@ def main():
     # im = get_screenshot_v1(region=region)
 
     # v2: 
-    region = CG.CGRectMake(10, 120, 344, 80) # height 80 for 百万英雄, 100 for 冲顶大会
+    region = CG.CGRectMake(10, 120, 344, 180)
     im = get_screenshot_v2(region=region)
     # im.save("images/screen_v1.png")
 

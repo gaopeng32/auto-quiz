@@ -7,7 +7,6 @@ import screen_analysis as sa
 import search_result as sr
 
 
-
 def main():
     # Record starttime
     start = time.time()
@@ -17,18 +16,19 @@ def main():
     question, options, is_neg = sa.parse_question_option(question_raw, options_raw)
     print("question: ", question)
     print("options: ", options)
-    print("negative: ", is_neg)
+    print("is negative: ", is_neg)
 
     # Search results
     result_list = sr.search(question)
-    print(result_list)
 
     # Find the best option match
     best_option = sr.get_best_option(result_list, options, question, is_neg)
     if best_option is None:
-        print('No answer')
+        print("No answer")
     else:
-        print('Best answer is: \033[1;31m{}\033[0m'.format(best_option))
+    	R = '\033[31m' # red
+    	W  = '\033[0m'  # white (normal)
+    	print("Best answer: {}{}{}".format(R, best_option, W))
 
     # Record endtime
     end = time.time()
